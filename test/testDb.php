@@ -1,4 +1,7 @@
 <?php
+namespace PJ\TEST\TEST_DB;
+
+use PJ\BASE\DB\Db;
 
 $objDb = Db::getInstance();
 
