@@ -8,5 +8,7 @@ $objDb->exec("INSERT INTO test (user_name,phone,comment) VALUES ('leeon', '66666
 $objDb->exec("INSERT INTO test (user_name,phone,comment) VALUES ('alin', '888888', 'test2')");
 
 $arrRes = $objDb->query('select * from test');
+foreach ($arrRes as $arrRow) {
+    var_dump($arrRow);
+}
 
-var_dump($arrRes);
