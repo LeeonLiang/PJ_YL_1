@@ -1,5 +1,6 @@
 <?php
-include_once("../base/Db.php");
+
+include_once dirname(__DIR__) . "/base/Db.php";
 
 $objDb = Db::getInstance();
 
