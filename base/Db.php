@@ -1,5 +1,4 @@
 <?php
-namespace PJ\BASE\DB;
 
 class Db
 {

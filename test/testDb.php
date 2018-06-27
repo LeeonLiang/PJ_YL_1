@@ -1,7 +1,5 @@
 <?php
-namespace PJ\TEST\TEST_DB;
-
-use PJ\BASE\DB\Db;
+include_once("../base/Db.php");
 
 $objDb = Db::getInstance();
 
