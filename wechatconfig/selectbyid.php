@@ -3,12 +3,12 @@
 include_once dirname(__DIR__) . "/base/Db.php";
 header('Content-Type:application/json; charset=utf-8');
 
-function select()
+function selectById($intHtmlNum)
 {
     $objDb = Db::getInstance();
 
     $arrResult = [];
-    $arrRes = $objDb->query("select * from wechat_num order by id asc");
+    $arrRes = $objDb->query("select * from wechat_num where html_num = $intHtmlNum order by id asc");
     foreach ($arrRes as $arrItem) {
         $arrResult[] = [
             'html_num' => $arrItem['html_num'],
@@ -18,4 +18,5 @@ function select()
     return $arrResult;
 }
 
-echo json_encode(select());
+$intHtmlNum = intval($_GET["html_num"]);
+echo json_encode(selectById($intHtmlNum));
