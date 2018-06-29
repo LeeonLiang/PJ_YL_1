@@ -10,9 +10,9 @@ function selectById($intHtmlNum)
     $arrResult = [];
 
     if (empty($intHtmlNum)) {
-        $arrRes = $objDb->query("select * from wechat_num order by id asc");
+        $arrRes = $objDb->query("select * from wechat_num order by html_num asc");
     } else {
-        $arrRes = $objDb->query("select * from wechat_num where html_num = $intHtmlNum order by id asc");
+        $arrRes = $objDb->query("select * from wechat_num where html_num = $intHtmlNum order by html_num asc");
     }
     foreach ($arrRes as $arrItem) {
         $arrResult[] = [
