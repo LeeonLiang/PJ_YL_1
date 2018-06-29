@@ -19,4 +19,7 @@ function selectById($intHtmlNum)
 }
 
 $intHtmlNum = intval($_GET["html_num"]);
+if (empty($intHtmlNum)) {
+    return;
+}
 echo json_encode(selectById($intHtmlNum));
